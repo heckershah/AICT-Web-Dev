@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - The Shadowed Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Shadowed Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html" class="active">Books</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li id="cart-link" class="hidden"><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="books" class="books">
+        <div class="heading">
+            <h2>Books Collection</h2>
+            <p>Explore our curated selection of thrilling reads. Sort by price or rating to find your perfect book!</p>
+        </div>
+
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for a book...">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div id="filters">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+            </select>
+        </div>
+        <div id="book-list" class="flex-wrap">
+            <!-- Hardcoded Books -->
+            <div class="book-card" data-price="10" data-rating="4.5" data-id="1" data-title="Tales Of Terror From The Tunnel's Mouth" >
+                <img src="book1.png" alt="Book 1" class="thumbnail">
+                <div class="book-details">
+                    <h3>Tales Of Terror From The Tunnel's Mouth</h3>
+                    <p>by Chris Priestly</p>
+                    <p>Price: $10</p>
+                    <p>Rating: 4.5⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-price="15" data-rating="4.8" data-id="2" data-title="Dracula">
+                <img src="book20.png" alt="Book 2" class="thumbnail">
+                <div class="book-details">
+                    <h3>Dracula</h3>
+                    <p>By Bram Stoker</p>
+                    <p>Price: $15</p>
+                    <p>Rating: 4.8⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-price="8" data-rating="4.2" data-id="3" data-title="A Good Girl's Guide To Murder">
+                <img src="book3.jpeg" alt="Book 3" class="thumbnail">
+                <div class="book-details">
+                    <h3>A Good Girl's Guide To Murder</h3>
+                    <p>by Holly Jackson</p>
+                    <p>Price: $8</p>
+                    <p>Rating: 4.2⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-price="12" data-rating="4.6" data-id="4" data-title="Not Even Bones">
+                <img src="book2.png" alt="Book 4" class="thumbnail">
+                <div class="book-details">
+                    <h3>Not Even Bones</h3>
+                    <p>By Rebecca Schaeffer</p>
+                    <p>Price: $12</p>
+                    <p>Rating: 4.6⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-price="7" data-rating="4.0" data-id="5" data-title="Chamber Of Chills">
+                <img src="book4.png" alt="Book 5" class="thumbnail">
+                <div class="book-details">
+                    <h3>Chamber Of Chills</h3>
+                    <p>By Doud Davidson</p>
+                    <p>Price: $7</p>
+                    <p>Rating: 4.0⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-price="20" data-rating="4.9" data-id="6" data-title="Blood Like Magic">
+                <img src="book5.png" alt="Book 6" class="thumbnail">
+                <div class="book-details">
+                    <h3>Blood Like Magic</h3>
+                    <p>By Liselle Sambury</p>
+                    <p>Price: $20</p>
+                    <p>Rating: 4.9⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-price="5" data-rating="3.8" data-id="7" data-title="Through The Woods">
+                <img src="book6.png" alt="Book 7" class="thumbnail">
+                <div class="book-details">
+                    <h3>Through The Woods</h3>
+                    <p>By Emily Carrol</p>
+                    <p>Price: $5</p>
+                    <p>Rating: 3.8⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-price="18" data-rating="4.7" data-id="8" data-title="Hellworld">
+                <img src="book7.png" alt="Book 8" class="thumbnail">
+                <div class="book-details">
+                    <h3>Hellworld</h3>
+                    <p>By Tom Leveen</p>
+                    <p>Price: $18</p>
+                    <p>Rating: 4.7⭐</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="book-card" data-price="18" data-rating="4.7" data-id="9" data-title="The Witch Haven">
+                    <img src="book8.png" alt="Book 8" class="thumbnail">
+                    <div class="book-details">
+                        <h3>The Witch Haven</h3>
+                        <p>By Sasha Pyton</p>
+                        <p>Price: $18</p>
+                        <p>Rating: 4.7⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="15" data-rating="4.5" data-id="10" data-title="Magic Dark and Strange">
+                    <img src="book9.png" alt="Book 9" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Magic Dark and Strange</h3>
+                        <p>By Kelly Powell</p>
+                        <p>Price: $15</p>
+                        <p>Rating: 4.5⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="16" data-rating="4.2" data-id="11" data-title="The Wicked Deep">
+                    <img src="book10.png" alt="Book 10" class="thumbnail">
+                    <div class="book-details">
+                        <h3>The Wicked Deep</h3>
+                        <p>by Shea Earnshaw</p>
+                        <p>Price: $16</p>
+                        <p>Rating: 4.2⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="11" data-rating="4.0" data-id="12" data-title="Book Of Fear">
+                    <img src="book11.png" alt="Book 11" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Book Of Fear</h3>
+                        <p>by Mary Black Rose</p>
+                        <p>Price: $18</p>
+                        <p>Rating: 4.0⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="20" data-rating="4.8" data-id="13" data-title="Blood Tingling Tales">
+                    <img src="book12.png" alt="Book 12" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Blood Tingling Tales</h3>
+                        <p>by Steve Hudgins</p>
+                        <p>Price: $20</p>
+                        <p>Rating: 4.8⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="18" data-rating="4.5" data-id="14" data-title="The Ghost Files">
+                    <img src="book13.png" alt="Book 13" class="thumbnail">
+                    <div class="book-details">
+                        <h3>The Ghost Files</h3>
+                        <p>by Apryl Baker</p>
+                        <p>Price: $18</p>
+                        <p>Rating: 4.5⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="13" data-rating="4.2" data-id="15" data-title="Seven Sins">
+                    <img src="book14.png" alt="Book 14" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Seven Sins</h3>
+                        <p>by Miguel Astrada</p>
+                        <p>Price: $13</p>
+                        <p>Rating: 4.2⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="15" data-rating="4.5" data-id:="16"  data-title="Behind You">
+                    <img src="book15.png" alt="Book 15" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Behind You</h3>
+                        <p>by Pylie Dark</p>
+                        <p>Price: $15</p>
+                        <p>Rating: 4.5⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="18" data-rating="4.7" data-id:="17" data-title="The Creeping">
+                    <img src="book16.png" alt="Book 16" class="thumbnail">
+                    <div class="book-details">
+                        <h3>The Creeping</h3>
+                        <p>by Alexandra Sirowy</p>
+                        <p>Price: $18</p>
+                        <p>Rating: 4.7⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="19" data-rating="4.8" data-id:="18" data-title="Severed">
+                    <img src="book17.png" alt="Book 17" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Severed</h3>
+                        <p>by Warren Barns</p>
+                        <p>Price: $19</p>
+                        <p>Rating: 4.8⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="14" data-rating="4.1" data-id:="19" data-title="Haunted">
+                    <img src="book18.png" alt="Book 18" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Haunted</h3>
+                        <p>by Chuck Palahniuk</p>
+                        <p>Price: $14</p>
+                        <p>Rating: 4.1⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-price="19" data-rating="4.9" data-id:="20" data-title="Fears">
+                    <img src="book19.png" alt="Book 19" class="thumbnail">
+                    <div class="book-details">
+                        <h3>Fears</h3>
+                        <p>by Ellen Daltow</p>
+                        <p>Price: $19</p>
+                        <p>Rating: 4.9⭐</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Shadowed Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

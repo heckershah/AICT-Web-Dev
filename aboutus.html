@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Shadowed Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Shadowed Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="aboutus.html" class="active">About Us</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="aboutus" class="aboutus">
+        <h2>About Us</h2>
+        
+        <p>Our goal is to create an inviting haven where readers can explore and experience the enchanting world of literature. <br>
+            Embark on this exciting journey with us! <br>
+            Don't miss out—subscribe to our newsletter for the latest updates and special offers!</p>
+        <form id="newsletter-form">
+            <label for="email">Subscribe to our Newsletter:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            <span id="error-message" class="error-message"></span>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div id="success-message" class="success-message"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Shadowed Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - The Shadowed Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Shadowed Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="feedback" class="feedback">
+        <h2>We Value Your Feedback</h2>
+        <p>Please share your queries or feedback with us!</p>
+        <form id="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            <label for="message">Feedback:</label>
+            <textarea id="message" name="message" placeholder="Your feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div id="success-message" class="success-message" style="display:none;"></div> <!-- Ensure it is initially hidden -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Shadowed Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
